@@ -20,4 +20,4 @@ The resulting executable takes CSV files as arguments. These will also be concat
 ./run_model file1.csv file2.csv ...
 ```
 
-stdout prints a comma-delimited list of predictions for every row in the combined table.
+stdout prints a dictionary. Each key-value pair is a prediction for a given run_index

@@ -55,4 +55,4 @@ def load_all_files(collection, condense=True):
         X = df.drop(["run_index"],axis=1)
         y = None
     
-    return X, y
+    return X, y, df["run_index"]
