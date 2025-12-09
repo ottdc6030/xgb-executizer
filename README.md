@@ -7,7 +7,7 @@ This project trains an XGBClassifier model and packages it as a standalone execu
 Run the bash script with CSV files as arguments.
 
 ```bash
-./create_exec.sh file1.csv file2.csv file3.csv ...
+bash ./create_exec.sh file1.csv file2.csv file3.csv ...
 ```
 
 All CSV files are concatenated in order and used as training data.
