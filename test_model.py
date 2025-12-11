@@ -1,5 +1,4 @@
 from sys import argv
-from xgboost import XGBClassifier
 from load_files import load_all_files
 import tl2cgen
 import numpy as np
