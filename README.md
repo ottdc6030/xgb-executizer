@@ -1,23 +1,27 @@
 # XGBClassifier Training and Prediction
 
-This project trains an XGBClassifier model and packages it as a standalone executable.
+This project trains an XGBClassifier model and packages it as a compiled shared library.
+
+And additional file shows how someone would import and use the compiled model in python.
 
 ## Training
 
 Run the bash script with CSV files as arguments.
 
 ```bash
-bash ./create_exec.sh file1.csv file2.csv file3.csv ...
+bash ./make_model.sh file1.csv file2.csv file3.csv ...
 ```
 
 All CSV files are concatenated in order and used as training data.
 
 ## Prediction
 
-The resulting executable takes CSV files as arguments. These will also be concatenated in the order you put them in.
+Like the bash file, test_model.py takes CSV files as arguments. These will also be concatenated in the order you put them in.
 
 ```bash
-./run_model file1.csv file2.csv ...
+python test_model.py file1.csv file2.csv ...
 ```
 
 stdout prints a dictionary. Each key-value pair is a prediction for a given run_index
+
+You can also import the function directly into your own project instead to get the dictionary directly
