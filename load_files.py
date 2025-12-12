@@ -1,7 +1,7 @@
 from pandas import read_csv, concat, DataFrame
 
 def load_all_files(collection, condense=True):
-    df = [read_csv(file) for file in collection]
+    df = [read_csv(file) if isinstance(file, str) else file for file in collection]
     df = concat(df, ignore_index=True)
 
     has_answers = "optimal_policy" in df.columns
